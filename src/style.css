@@ -1,0 +1,15 @@
+.wrap, .todos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todos {
+  flex-direction: column;
+  width: 300px;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+}
