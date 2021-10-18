@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from './types';
+import {ADD_TODO, REMOVE_TODO, SEARCH_TODO, TOGGLE_TODO} from './types';
 
 export const addTodo = (value) => {
   return {
@@ -18,5 +18,12 @@ export const toggleTodo = (index) => {
   return {
     type: TOGGLE_TODO,
     payload: index
+  }
+}
+
+export const searchTodo = (searchStr) => {
+  return {
+    type: SEARCH_TODO,
+    payload: searchStr
   }
 }

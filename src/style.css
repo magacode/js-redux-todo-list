@@ -13,3 +13,8 @@
   text-align: center;
   text-transform: uppercase;
 }
+
+#search {
+  width: 100%;
+  margin: 4px 0;
+}

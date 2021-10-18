@@ -4,8 +4,19 @@ import './style.css'
 
 export const createListTodo = (storeData, todoList) => {
   const todos = storeData.todos;
+  const searchStr = storeData.searchStr;
 
-  return todos.forEach((task, index) => {
+  let searchTodos;
+
+  if (searchStr.length === 0) {
+    searchTodos = todos;
+  } else {
+    searchTodos = todos.filter(item => {
+      return item.title.indexOf(searchStr) > -1;
+    });
+  }
+
+  return searchTodos.forEach((task, index) => {
     const btnDelete = createBtnDelete(index);
     const checkBox = createCheckbox(index);
 
